@@ -1,0 +1,4875 @@
+﻿[
+  {
+    "value": {
+      "HAS_SUBTOPIC": {
+        "count": 1070,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Invoice": {
+        "count": 2844445,
+        "relationships": {
+          "SHIPPED_TO": {
+            "count": 0,
+            "properties": {
+              "invoice_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "shipto_country": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "BILLED_TO": {
+            "count": 0,
+            "properties": {
+              "billto_country": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "IS_PART_OF": {
+            "count": 1070,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "LineItem"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "prod_line": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "invoice_quantity": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "order_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "promo_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "invoice_amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "invoice_number": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "invoice_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "Address": {
+        "count": 48976,
+        "relationships": {
+          "HAS_LOCATION": {
+            "count": 1880,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "EANCompany"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "state_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "street": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "country_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "postal_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "IS_COMPRISED_OF": {
+        "count": 4886,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Customer": {
+        "count": 3103077,
+        "relationships": {
+          "SHIPPED_TO": {
+            "count": 936,
+            "properties": {
+              "invoice_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "shipto_country": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Invoice"
+            ]
+          },
+          "REVIEWED": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Product"
+            ]
+          },
+          "BILLED_TO": {
+            "count": 936,
+            "properties": {
+              "billto_country": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "invoice_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Invoice"
+            ]
+          },
+          "SAME_AS": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "School",
+              "Member"
+            ]
+          },
+          "IS_COMPRISED_OF": {
+            "count": 4886,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "CompanyAccount"
+            ]
+          },
+          "EMPLOYED_BY": {
+            "count": 26,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Customer",
+              "Customer"
+            ]
+          },
+          "IS_ASSIGNED": {
+            "count": 0,
+            "properties": {
+              "assignment_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "assignment_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "total_assignments": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Subject"
+            ]
+          },
+          "ATTENDED": {
+            "count": 0,
+            "properties": {
+              "end_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "ticket_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "curriculum_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "degree_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_status": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "promo_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "active_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "rate_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "sequence_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "expired_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "marketing_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_invoiced": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "registration_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "eu_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_order_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "how_received": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "refund_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "source_document": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "badge_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_on_hold": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "check_in_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "start_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "School",
+              "SAEEvent"
+            ]
+          },
+          "HAS_LOCATION": {
+            "count": 0,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Location"
+            ]
+          },
+          "MEMBER": {
+            "count": 0,
+            "properties": {
+              "inactive_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "section_role": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "join_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Body"
+            ]
+          },
+          "HAS_MEMBER_RECORD": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "SAEMemberMonthlySnapshot"
+            ]
+          },
+          "HAS_CUSTOMER_MOBILUS_ACCOUNT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "MobilusAccount"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "TechnologyTopicsPreferences"
+            ]
+          },
+          "AUTHORED": {
+            "count": 0,
+            "properties": {
+              "author_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Product"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "cust_num": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "customer_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "noemail_indicator": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "job_role": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "gender": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "customer_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "nomail_indicator": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "birth_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "birth_year": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "member_service_years": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "years_as_customer": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "business_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "employment_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "membership_status_indicator": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "job_title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "graduation_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "member_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "marketing_suspended_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "customer_record_creation_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "duns_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "employee_sector": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "email_address": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "customer_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "phone_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "job_category": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "email_verification_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "employer_sector": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "Product": {
+        "count": 481631,
+        "relationships": {
+          "REFERS_TO_PRODUCT": {
+            "count": 319,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "LineItem"
+            ]
+          },
+          "OVERSEES": {
+            "count": 7318,
+            "properties": {
+              "author_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Body"
+            ]
+          },
+          "AUTHORED": {
+            "count": 136,
+            "properties": {
+              "author_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "REVIEWED": {
+            "count": 324,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "IS_ASSIGNED": {
+            "count": 0,
+            "properties": {
+              "assignment_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "assignment_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "total_assignments": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Subject"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "estimated_draft_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "root_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "group_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "product_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "doi_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "product_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "root_product_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "wip_start_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "selected_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "product_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "project_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "isbn_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "publication_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "std_status_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "estimated_published_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "entered_date": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "group_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "std_status_code_descr": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cid": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "ASSIGNED_COMMODITY": {
+        "count": 52,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_TRANSACTION": {
+        "count": 566930,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "SAEEvent": {
+        "count": 19922,
+        "relationships": {
+          "HAS_LOCATION": {
+            "count": 0,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Location"
+            ]
+          },
+          "REFERS_TO_EVENT": {
+            "count": 41,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "LineItem"
+            ]
+          },
+          "ATTENDED": {
+            "count": 440,
+            "properties": {
+              "end_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "ticket_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "curriculum_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "degree_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_status": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "promo_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "active_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "rate_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "sequence_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "expired_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "marketing_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_invoiced": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "registration_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "eu_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_order_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "how_received": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "refund_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "source_document": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "badge_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_on_hold": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "check_in_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "start_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Subject"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "end_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "prod_grp_cd": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "event_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "responsible_division": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "state": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "meeting_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "start_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "Course": {
+        "count": 725,
+        "relationships": {
+          "REFERS_TO_COURSE": {
+            "count": 7,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "LineItem"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "Member": {
+        "count": 57074,
+        "relationships": {
+          "SAME_AS": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "IS_PART_OF": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Body"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "election_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "membership_auto_renewal": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "graduation_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "member_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "member_class": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "expiry_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "src_doc": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "promo_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "school_section": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "member_level": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "member_activity_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "affiliate_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "service_years": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "how_received": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "other_organization_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "SHIPPED_TO": {
+        "count": 2843808,
+        "type": "relationship",
+        "properties": {
+          "invoice_number": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "shipto_country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "invoice_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "EANIndustry": {
+        "count": 5,
+        "relationships": {
+          "ASSIGNED_INDUSTRY": {
+            "count": 107,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "EANTaskGroup"
+            ]
+          },
+          "HAS_INDUSTRY": {
+            "count": 1118,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "EANCompany"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 1986,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Certificate"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "industry_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "program_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "industry_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "ASSIGNED_INDUSTRY": {
+        "count": 107,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "BILLED_TO": {
+        "count": 2843808,
+        "type": "relationship",
+        "properties": {
+          "billto_country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "invoice_number": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "invoice_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "ARCHIVES": {
+        "count": 38241,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "EANCommodity": {
+        "count": 53,
+        "relationships": {
+          "HAS_SUBJECT": {
+            "count": 813,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Audit"
+            ]
+          },
+          "ASSIGNED_COMMODITY": {
+            "count": 52,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "EANTaskGroup"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 1986,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Certificate"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "commodity_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "HAS_MEMBER": {
+        "count": 11193,
+        "type": "relationship",
+        "properties": {
+          "effective_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "alternate_vote_priority": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "role_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "voting_member_associated_to": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "expiry_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "HAS_MEMBER_RECORD": {
+        "count": 10398736,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_CUSTOMER_MOBILUS_ACCOUNT": {
+        "count": 15173,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "IS_PART_OF": {
+        "count": 44332771,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "REFERS_TO_EVENT": {
+        "count": 1535893,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_PARENT": {
+        "count": 160,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Certificate": {
+        "count": 102289,
+        "relationships": {
+          "IS_FOR": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCompanyArchive"
+            ]
+          },
+          "RESULT": {
+            "count": 921,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Audit"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANIndustry",
+              "EANCommodity"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "is_nacla": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "certificate_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "eligibility_expiry": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "issue_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "original_eligibility_expiry": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "expiry_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "certificate_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "revision": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "NetSuiteTransactionLine": {
+        "count": 5727629,
+        "relationships": {
+          "HAS_TRANSACTION": {
+            "count": 56943,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "NetSuiteCustomer"
+            ]
+          },
+          "HAS_ITEM": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "NetSuiteItem"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "account_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "location_country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_line_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "account_type_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "line_memo": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_accounts_payable": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "is_transaction_intercompany_adjustment": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "location_city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "class_full_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "account_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_accounts_receivable": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_account_leftside": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "accounting_period_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "currency_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_income_account": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "currency_symbol": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "item_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "parent_account_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "unique_key": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "department_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_due_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "vendor_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_expense_account": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "sales_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "entity_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_accounting_period_closed": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "subsidiary_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_memo": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "location_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "account_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_accounting_period_adjustment": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "is_account_intercompany": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "is_transaction_non_posting": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "accounting_period_ending": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "converted_amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "vendor_create_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "NetSuiteCustomer": {
+        "count": 11789,
+        "relationships": {
+          "HAS_TRANSACTION": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "NetSuiteTransactionLine"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "customer_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "entity_title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "last_sale_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "entity_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "customer_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "first_order_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "date_created": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "is_person": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "balance_search": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "custentity_contract_item_customer_since": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "last_modified_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "last_order_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "external_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "entity_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "overdue_balance_search": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "custentity_contract_item_retention_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "alt_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "date_closed": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "contact": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "company_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "first_sale_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "currency": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "REFERS_TO_COURSE": {
+        "count": 204514,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "SAME_AS": {
+        "count": 61091,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "MobilusAccount": {
+        "count": 30286,
+        "relationships": {
+          "HAS_CUSTOMER_MOBILUS_ACCOUNT": {
+            "count": 5,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "HAS_SUBSCRIPTION": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "MobilusSubscription"
+            ]
+          },
+          "HAS_COMPANY_MOBILUS_ACCOUNT": {
+            "count": 2517,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "CompanyAccount"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "mobilus_account_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "IS_ASSIGNED": {
+        "count": 6942318,
+        "type": "relationship",
+        "properties": {
+          "assignment_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "assignment_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "total_assignments": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "ATTENDED": {
+        "count": 1307795,
+        "type": "relationship",
+        "properties": {
+          "end_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "ticket_quantity": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "curriculum_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "degree_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "registration_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "promo_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "active_graduation_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "rate_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "registration_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "sequence_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "expired_graduation_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "marketing_sw": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "quantity_invoiced": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "registration_amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "array": false
+          },
+          "eu_sw": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "registration_order_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "how_received": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "refund_amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "array": false
+          },
+          "source_document": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "badge_quantity": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "quantity_on_hold": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          },
+          "check_in_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "start_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "SUPPLIES": {
+        "count": 23519,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "EANCompany": {
+        "count": 24497,
+        "relationships": {
+          "HAS_INDUSTRY": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANIndustry"
+            ]
+          },
+          "EMPLOYED_BY": {
+            "count": 671,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Contact"
+            ]
+          },
+          "HAS_PARENT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCompany",
+              "EANCompany"
+            ]
+          },
+          "ARCHIVES": {
+            "count": 1092,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "EANCompanyArchive"
+            ]
+          },
+          "HAS_LOCATION": {
+            "count": 0,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Address"
+            ]
+          },
+          "BUYER": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Audit"
+            ]
+          },
+          "SUPPLIES": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCompany",
+              "EANCompany"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "is_self_audit_allowed": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_hq": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "company_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "is_identifiable_supplier_cust": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_sac_reviewer": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "scheduling_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "language_preference": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cage_cd": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "supplier_network_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_test_company": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "company_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "duns": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "parent_company_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "MEMBER": {
+        "count": 750777,
+        "type": "relationship",
+        "properties": {
+          "inactive_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          },
+          "section_role": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "join_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "School": {
+        "count": 10315,
+        "relationships": {
+          "HAS_LOCATION": {
+            "count": 0,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Location"
+            ]
+          },
+          "SAME_AS": {
+            "count": 1,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "ATTENDED": {
+            "count": 440,
+            "properties": {
+              "end_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "ticket_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "curriculum_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "degree_name": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_status": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "promo_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "active_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "rate_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "sequence_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "expired_graduation_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "marketing_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_invoiced": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "registration_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "eu_sw": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "registration_order_number": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "how_received": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "refund_amount": {
+                "existence": false,
+                "type": "FLOAT",
+                "indexed": false,
+                "array": false
+              },
+              "source_document": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "badge_quantity": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "quantity_on_hold": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              },
+              "check_in_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "start_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "MEMBER": {
+            "count": 0,
+            "properties": {
+              "inactive_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "section_role": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "join_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Body"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "school_year_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "school_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "associates_degree": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "dean_of_engineering": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "masters_degree": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "phd": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_research_facility": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "accreditation_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "school_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "primary_curriculum": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "alternate_phone_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "phone_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "bachelors_degree": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "HAS_NEXT": {
+        "count": 65164,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "EANCompanyArchive": {
+        "count": 38250,
+        "relationships": {
+          "ARCHIVES": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCompany"
+            ]
+          },
+          "IS_FOR": {
+            "count": 993,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Certificate"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "full_street_address": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "company_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "duns_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "po_box": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cage_cd": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "archive_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "mail_stop": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "state_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "street": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "company_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "country_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "suite_apartment": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "phone_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "phone_extension": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "archive_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "postal_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "PrefCenterTopic": {
+        "count": 13,
+        "relationships": {
+          "HAS_PF_TOPIC": {
+            "count": 1081,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Subject"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "CompanyAccount": {
+        "count": 40,
+        "relationships": {
+          "IS_COMPRISED_OF": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "HAS_COMPANY_MOBILUS_ACCOUNT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "MobilusAccount"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "company_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "company_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "EANTaskGroup": {
+        "count": 107,
+        "relationships": {
+          "HAS_MEMBER": {
+            "count": 0,
+            "properties": {
+              "effective_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "alternate_vote_priority": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "role_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "voting_member_associated_to": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "expiry_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Contact"
+            ]
+          },
+          "ASSIGNED_COMMODITY": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCommodity"
+            ]
+          },
+          "ASSIGNED_INDUSTRY": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANIndustry"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "audit_program_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "task_group_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "task_group_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "ASSIGNED": {
+        "count": 1208325,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Lead": {
+        "count": 643178,
+        "relationships": {
+
+        },
+        "type": "node",
+        "properties": {
+          "country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cms_parent_number_c": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "marketo_id": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": true,
+            "unique": true
+          },
+          "customer_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "date_of_birth": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "created_at": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "industry": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "marketing_suspended": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "billing_postal_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "billing_state": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "mkto_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "company": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "main_phone": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "email": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "website": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "lead_status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "address": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "billing_country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cms_employer_number_c": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "billing_street": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "billing_city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "number_of_employees": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "unsubscribed": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "annual_revenue": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "REFERS_TO_PRODUCT": {
+        "count": 9470011,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "MobilusSubscription": {
+        "count": 51723,
+        "relationships": {
+          "HAS_CHILD_RECORD": {
+            "count": 247,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "MobilusSubscription",
+              "MobilusSubscription"
+            ]
+          },
+          "HAS_SUBSCRIPTION": {
+            "count": 1085,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "MobilusAccount"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "end_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "mobilus_subscription_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "authentication_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "free_trial": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "start_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "BUYER": {
+        "count": 82977,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "IS_FOR": {
+        "count": 102300,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_PF_TOPIC": {
+        "count": 1081,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Body": {
+        "count": 4356,
+        "relationships": {
+          "OVERSEES": {
+            "count": 0,
+            "properties": {
+              "author_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "out",
+            "labels": [
+              "Product"
+            ]
+          },
+          "HAS_SUBDIVISION": {
+            "count": 123,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Body",
+              "Body"
+            ]
+          },
+          "MEMBER": {
+            "count": 244,
+            "properties": {
+              "inactive_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "section_role": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "join_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer",
+              "School"
+            ]
+          },
+          "IS_PART_OF": {
+            "count": 1096,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Member",
+              "SAEMemberMonthlySnapshot"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "section_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "section_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "section_chapter": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "NetSuiteItem": {
+        "count": 87441,
+        "relationships": {
+          "HAS_ITEM": {
+            "count": 81,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "NetSuiteTransactionLine"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "custitem_dwiz_product_type": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "is_intercompany": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_sae_cms_product_type": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "item_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_product_line": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "item_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "stock_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_sae_cms_prod_grp_code": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "last_modified_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_dwiz_content_type": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "display_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_sae_publication_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "expense_account": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "full_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_dwiz_publication_category": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "custitem_sae_event_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "subtype": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "created_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "last_purchase_price": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "custitem_dwiz_content_identifier": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "item_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "income_account": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "REVIEWED": {
+        "count": 311394,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "SAEMemberMonthlySnapshot": {
+        "count": 10398736,
+        "relationships": {
+          "HAS_MEMBER_RECORD": {
+            "count": 3223,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          },
+          "IS_PART_OF": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Body"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "election_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "member_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "student_count": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "expiry_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "member_level": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "member_activity_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "member_grade_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "calendar_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "affiliate_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "service_years": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "membership_activity_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "member_count": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "member_grade": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "EMPLOYED_BY": {
+        "count": 1847758,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_LOCATION": {
+        "count": 2941898,
+        "type": "relationship",
+        "properties": {
+          "is_preferred_address": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "address_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "street": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "address_1": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "address_2": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "is_good_address": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "zip_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          },
+          "address_number": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "HAS_CHILD_RECORD": {
+        "count": 45411,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "OVERSEES": {
+        "count": 55077,
+        "type": "relationship",
+        "properties": {
+          "author_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "LineItem": {
+        "count": 32401680,
+        "relationships": {
+          "REFERS_TO_PRODUCT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Product"
+            ]
+          },
+          "REFERS_TO_EVENT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "SAEEvent"
+            ]
+          },
+          "REFERS_TO_COURSE": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Course"
+            ]
+          },
+          "IS_PART_OF": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Invoice"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "line_item_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "historical_subsidiary": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "event_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "discount_percentage": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "historical_business_unit": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cms_product_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "netsuite_business_unit": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "netsuite_product_group": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "transaction_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "amount": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "cms_product_group": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "event_end_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "gl_pstng_ref": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "unit_price": {
+            "existence": false,
+            "type": "FLOAT",
+            "indexed": false,
+            "unique": false
+          },
+          "transformed_country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "product_title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "cms_product_line": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "revenue_recognition_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "quantity_invoiced": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "event_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "item_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "adjustment_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "event_start_date": {
+            "existence": false,
+            "type": "DATE",
+            "indexed": false,
+            "unique": false
+          },
+          "historical_product_group": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "HAS_SUBJECT": {
+        "count": 82976,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Ballot": {
+        "count": 43830,
+        "relationships": {
+
+        },
+        "type": "node",
+        "properties": {
+          "migrated_ballot_summary": {
+            "existence": false,
+            "type": "BOOLEAN",
+            "indexed": false,
+            "unique": false
+          },
+          "ballot.endDate": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "document.productCode": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "committee.code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "ballot.ballotNum": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "application_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "created_date": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "updated_date": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "ballot.startDate": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "ballot._id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "Subject": {
+        "count": 1090,
+        "relationships": {
+          "HAS_SUBTOPIC": {
+            "count": 184,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Subject",
+              "Subject"
+            ]
+          },
+          "HAS_PF_TOPIC": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "PrefCenterTopic"
+            ]
+          },
+          "IS_ASSIGNED": {
+            "count": 1560,
+            "properties": {
+              "assignment_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "assignment_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "total_assignments": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer",
+              "Product"
+            ]
+          },
+          "ASSIGNED": {
+            "count": 97,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "SAEEvent"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "tech_num": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "Contact": {
+        "count": 144516,
+        "relationships": {
+          "HAS_MEMBER": {
+            "count": 11193,
+            "properties": {
+              "effective_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              },
+              "alternate_vote_priority": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "role_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "voting_member_associated_to": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "expiry_date": {
+                "existence": false,
+                "type": "DATE",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "EANTaskGroup"
+            ]
+          },
+          "EMPLOYED_BY": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCompany"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "is_staff": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "last_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "middle_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "first_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "job_title": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "Audit": {
+        "count": 100909,
+        "relationships": {
+          "BUYER": {
+            "count": 3285,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "EANCompany"
+            ]
+          },
+          "HAS_SUBJECT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "EANCommodity"
+            ]
+          },
+          "HAS_NEXT": {
+            "count": 454,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Audit",
+              "Audit"
+            ]
+          },
+          "RESULT": {
+            "count": 0,
+            "properties": {
+
+            },
+            "direction": "out",
+            "labels": [
+              "Certificate"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "end_date": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          },
+          "certificate_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "parent_audit_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "commodity_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "audit_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "company_id": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "country_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "is_satellite": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "total_ncr": {
+            "existence": false,
+            "type": "INTEGER",
+            "indexed": false,
+            "unique": false
+          },
+          "status": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "start_date": {
+            "existence": false,
+            "type": "LOCAL_DATE_TIME",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      },
+      "HAS_ITEM": {
+        "count": 403811,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_SUBDIVISION": {
+        "count": 4338,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "HAS_INDUSTRY": {
+        "count": 28703,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "AUTHORED": {
+        "count": 410927,
+        "type": "relationship",
+        "properties": {
+          "author_type": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "array": false
+          }
+        }
+      },
+      "HAS_SUBSCRIPTION": {
+        "count": 50962,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "RESULT": {
+        "count": 95281,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "TechnologyTopicsPreferences": {
+        "count": 20,
+        "relationships": {
+          "ASSIGNED": {
+            "count": 280,
+            "properties": {
+
+            },
+            "direction": "in",
+            "labels": [
+              "Customer"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "tech_description": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "tech_code": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "tech_number": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          }
+        },
+        "labels": []
+      },
+      "HAS_COMPANY_MOBILUS_ACCOUNT": {
+        "count": 2517,
+        "type": "relationship",
+        "properties": {
+
+        }
+      },
+      "Location": {
+        "count": 158417,
+        "relationships": {
+          "HAS_LOCATION": {
+            "count": 850,
+            "properties": {
+              "is_preferred_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_type": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "street": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_1": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_2": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "is_good_address": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "zip_code": {
+                "existence": false,
+                "type": "STRING",
+                "indexed": false,
+                "array": false
+              },
+              "address_number": {
+                "existence": false,
+                "type": "INTEGER",
+                "indexed": false,
+                "array": false
+              }
+            },
+            "direction": "in",
+            "labels": [
+              "Customer",
+              "SAEEvent",
+              "School"
+            ]
+          }
+        },
+        "type": "node",
+        "properties": {
+          "country": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "state_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "city": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "country_name": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          },
+          "location": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": true,
+            "unique": true
+          },
+          "state": {
+            "existence": false,
+            "type": "STRING",
+            "indexed": false,
+            "unique": false
+          }
+        },
+        "labels": []
+      }
+    }
+  }
+]
